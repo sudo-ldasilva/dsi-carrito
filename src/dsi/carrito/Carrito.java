@@ -12,18 +12,18 @@ public class Carrito {
     private ArrayList<Pago> pagos;
     private Estado estado;
 
-    public Carrito(ArrayList<Item> items, Date fechaCompra, Cliente cliente, Direccion direccionEnvio, Direccion direccionCobro, ArrayList<Pago> pagos, Estado estado) {
+    public Carrito(ArrayList<Item> items, Date fechaCompra, Cliente cliente, Direccion direccionEnvio, Direccion direccionCobro, ArrayList<Pago> pagos) {
         this.items = items;
         this.fechaCompra = fechaCompra;
         this.cliente = cliente;
         this.direccionEnvio = direccionEnvio;
         this.direccionCobro = direccionCobro;
         this.pagos = pagos;
-        this.estado = estado;
+        this.estado = Estado.EN_PROCESO; // Tomamos en cuenta que al crear un carrito, aumaticamente está en proceso
     }
 
     public void setEstado(Estado estado) {
-        this.estado = Estado.CERRADO;
+        this.estado = estado;
     }
 
     public Date getFechaCompra() {

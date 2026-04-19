@@ -6,7 +6,7 @@ public class Producto {
 
     private String EAN13;
     private String nombre;
-    private ArrayList<PrecioProducto> preciosHistoricos = new ArrayList<>();
+    private ArrayList<PrecioProducto> preciosHistoricos;
     
     public Producto (String EAN13, String nombre, ArrayList<PrecioProducto> preciosHistoricos) {
         this.EAN13 = EAN13;
@@ -28,7 +28,7 @@ public class Producto {
 
     public double getPrecio(Date fechaVigencia) {
         for (PrecioProducto precio : preciosHistoricos) {
-            if (precio.getCumpleVIgencia(fechaVigencia)) {
+            if (precio.getCumpleVigencia(fechaVigencia)) {
                 return precio.getPrecio();
             }
         }

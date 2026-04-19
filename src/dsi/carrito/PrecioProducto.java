@@ -26,7 +26,7 @@ public class PrecioProducto {
         return precio;
     }
     
-    public boolean getCumpleVIgencia(Date fecha) {
+    public boolean getCumpleVigencia(Date fecha) {
         return fecha.after(fechaInicioVigencia) && fecha.before(fechaFinVigencia);
     }
 }

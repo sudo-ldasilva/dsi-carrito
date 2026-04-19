@@ -9,6 +9,19 @@ public class Direccion {
     private int cuerpo;
     private String departamento;
     private Ciudad ciudad;
+    private boolean habilitadaParaEnvio;
+
+    public Direccion(String calle1, String calle2, int altura, boolean sinAltura, int piso, int cuerpo, String departamento, Ciudad ciudad, boolean habilitadaParaEnvio) {
+        this.calle1 = calle1;
+        this.calle2 = calle2;
+        this.altura = altura;
+        this.sinAltura = sinAltura;
+        this.piso = piso;
+        this.cuerpo = cuerpo;
+        this.departamento = departamento;
+        this.ciudad = ciudad;
+        this.habilitadaParaEnvio = habilitadaParaEnvio;
+    }
     
     public String getDireccion(){
         if(sinAltura){
@@ -25,7 +38,7 @@ public class Direccion {
         return calle2;
     }
     public boolean estaHabilitadaEnvio(){
-        return true;
+        return habilitadaParaEnvio;
     }
     
 }
