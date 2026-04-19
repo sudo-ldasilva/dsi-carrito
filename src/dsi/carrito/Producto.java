@@ -26,7 +26,7 @@ public class Producto {
         return nombre.substring(0, 4);
     }
 
-    public double getPrecio(Date fechaVigencia, ArrayList<PrecioProducto> preciosHistoricos) {
+    public double getPrecio(Date fechaVigencia) {
         for (PrecioProducto precio : preciosHistoricos) {
             if (precio.getCumpleVIgencia(fechaVigencia)) {
                 return precio.getPrecio();
